@@ -37,7 +37,7 @@ export function URLAnalyzerCard({ onAnalysisComplete }: URLAnalyzerCardProps) {
     setResult(null)
 
     try {
-      const response = await fetch("https://cybersentinel-csdr.onrender.com/analyze", {
+      const response = await fetch("/api/proxy", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: url.trim() }),
