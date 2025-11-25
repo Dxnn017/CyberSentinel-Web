@@ -16,7 +16,7 @@ export default function Documentation() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 100, damping: 10 },
+      transition: { type: "spring" as const, stiffness: 100, damping: 10 },
     },
   }
 
@@ -63,7 +63,7 @@ export default function Documentation() {
   ]
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pt-20">
       {/* Header */}
       <motion.div
         className="border-b border-cyan-500/20 bg-gradient-to-r from-slate-950/50 to-slate-900/50 backdrop-blur sticky top-16 z-40"
