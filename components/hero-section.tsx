@@ -82,8 +82,8 @@ export function HeroSection() {
         </motion.div>
 
         {/* Títulos */}
-        <motion.div variants={itemVariants} className="text-center mb-8">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+        <motion.div variants={itemVariants} className="text-center mb-8 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
             <span className="gradient-text block">Detecta Phishing</span>
             <motion.span
               className="text-white block"
@@ -95,7 +95,7 @@ export function HeroSection() {
             </motion.span>
           </h1>
 
-          <motion.p variants={itemVariants} className="text-xl text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <motion.p variants={itemVariants} className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-4">
             CyberSentinel utiliza aprendizaje automático avanzado para analizar URLs y protegerte de sitios fraudulentos
             en tiempo real. Mantente seguro.
           </motion.p>

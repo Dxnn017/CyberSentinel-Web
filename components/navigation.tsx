@@ -25,23 +25,23 @@ export function Navigation() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/"
-              className="flex items-center gap-3 font-bold text-lg hover:opacity-80 transition-opacity group"
+              className="flex items-center gap-2 sm:gap-3 font-bold text-base sm:text-lg hover:opacity-80 transition-opacity group"
             >
               <motion.div
-                className="p-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg group-hover:shadow-lg group-hover:shadow-cyan-500/50 transition"
+                className="p-1.5 sm:p-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg group-hover:shadow-lg group-hover:shadow-cyan-500/50 transition"
                 animate={{ rotate: [0, 5, 0] }}
                 transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
               >
-                <span className="text-white text-xl">🛡️</span>
+                <span className="text-white text-lg sm:text-xl">🛡️</span>
               </motion.div>
-              <motion.span className="gradient-text bg-clip-text" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <motion.span className="gradient-text bg-clip-text text-sm sm:text-base" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 CyberSentinel
               </motion.span>
             </Link>
           </motion.div>
 
           {/* Navigation Links */}
-          <div className="flex gap-2">
+          <div className="flex gap-1 sm:gap-2">
             {links.map((link, i) => {
               const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
 
@@ -54,19 +54,20 @@ export function Navigation() {
                 >
                   <Link
                     href={link.href}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-medium ${
+                    className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg transition-all duration-300 text-xs sm:text-sm font-medium ${
                       isActive
                         ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/50"
                         : "text-slate-400 hover:text-white hover:bg-slate-800/50"
                     }`}
                   >
                     <motion.span
+                      className="text-base sm:text-lg"
                       animate={{ rotate: isActive ? 360 : 0 }}
                       transition={{ duration: 2, repeat: isActive ? Number.POSITIVE_INFINITY : 0 }}
                     >
                       {link.icon}
                     </motion.span>
-                    <span>{link.label}</span>
+                    <span className="hidden xs:inline sm:inline">{link.label}</span>
                   </Link>
                 </motion.div>
               )
