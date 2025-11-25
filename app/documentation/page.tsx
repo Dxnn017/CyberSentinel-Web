@@ -218,20 +218,22 @@ export default function Documentation() {
               <p className="text-slate-400 text-sm mb-4">Protégete en tiempo real con nuestra extensión oficial.</p>
               <div className="space-y-2">
                 <motion.a
-                  href="#"
-                  className="btn-glow w-full text-center text-sm py-2"
+                  href="/extension"
+                  className="btn-glow w-full text-center text-sm py-2 block"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Chrome Web Store
+                  Ver Extensión
                 </motion.a>
                 <motion.a
-                  href="#"
-                  className="btn-ghost w-full text-center text-sm py-2"
+                  href="https://github.com/Dxnn017/CyberSentinel-Extension"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost w-full text-center text-sm py-2 block"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Firefox Add-ons
+                  Ver en GitHub
                 </motion.a>
               </div>
             </motion.div>
@@ -247,13 +249,14 @@ export default function Documentation() {
                 Soporte
               </h3>
               <p className="text-slate-300 text-sm mb-4">¿Preguntas? Contacta con nuestro equipo de soporte.</p>
-              <motion.button
-                className="btn-glow w-full text-sm py-2"
+              <motion.a
+                href="/support"
+                className="btn-glow w-full text-sm py-2 block text-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Abrir Ticket de Soporte
-              </motion.button>
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
