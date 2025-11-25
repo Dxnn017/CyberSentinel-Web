@@ -1,0 +1,114 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Glow -->
+  <circle cx="256" cy="256" r="240" fill="url(#glow)" opacity="0.15"/>
+  
+  <!-- Main Shield -->
+  <path d="M256 64L128 112V240C128 336 256 416 256 416C256 416 384 336 384 240V112L256 64Z" 
+        fill="url(#mainGradient)" 
+        filter="url(#shadow)"/>
+  
+  <!-- Shield Border -->
+  <path d="M256 64L128 112V240C128 336 256 416 256 416C256 416 384 336 384 240V112L256 64Z" 
+        stroke="url(#borderGradient)" 
+        stroke-width="6" 
+        fill="none"
+        stroke-linejoin="round"/>
+  
+  <!-- Inner Glow -->
+  <path d="M256 96L160 132V240C160 312 256 376 256 376C256 376 352 312 352 240V132L256 96Z" 
+        fill="url(#innerGlow)" 
+        opacity="0.4"/>
+  
+  <!-- Check Mark -->
+  <g filter="url(#checkShadow)">
+    <path d="M216 248L236 272L296 208" 
+          stroke="white" 
+          stroke-width="20" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          opacity="0.95"/>
+  </g>
+  
+  <!-- Scan Lines Effect -->
+  <g opacity="0.15">
+    <line x1="180" y1="160" x2="332" y2="160" stroke="url(#scanGradient)" stroke-width="2"/>
+    <line x1="180" y1="190" x2="332" y2="190" stroke="url(#scanGradient)" stroke-width="2"/>
+    <line x1="180" y1="300" x2="332" y2="300" stroke="url(#scanGradient)" stroke-width="2"/>
+    <line x1="180" y1="330" x2="332" y2="330" stroke="url(#scanGradient)" stroke-width="2"/>
+  </g>
+  
+  <!-- Corner Accents -->
+  <circle cx="140" cy="124" r="6" fill="#a78bfa" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="372" cy="124" r="6" fill="#67e8f9" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="170" cy="360" r="6" fill="#06b6d4" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="342" cy="360" r="6" fill="#8b5cf6" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Definitions -->
+  <defs>
+    <!-- Main Gradient -->
+    <linearGradient id="mainGradient" x1="128" y1="64" x2="384" y2="416">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    
+    <!-- Border Gradient -->
+    <linearGradient id="borderGradient" x1="128" y1="64" x2="384" y2="416">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    
+    <!-- Inner Glow -->
+    <radialGradient id="innerGlow" cx="50%" cy="30%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#e0e7ff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Background Glow -->
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </radialGradient>
+    
+    <!-- Scan Lines -->
+    <linearGradient id="scanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </linearGradient>
+    
+    <!-- Shadow -->
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Check Shadow -->
+    <filter id="checkShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
