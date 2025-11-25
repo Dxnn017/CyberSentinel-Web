@@ -69,6 +69,7 @@ export function URLAnalyzerCard({ onAnalysisComplete }: URLAnalyzerCardProps) {
 
   return (
     <motion.div
+      id="url-analyzer"
       className="glass-card p-8 border-2 border-cyan-500/30"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}

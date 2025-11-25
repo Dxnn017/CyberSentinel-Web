@@ -10,6 +10,17 @@ export function HeroSection() {
     { icon: "📊", label: "Análisis", value: "Rastreo Completo" },
   ]
 
+  const scrollToAnalyzer = () => {
+    const analyzerElement = document.querySelector('#url-analyzer')
+    if (analyzerElement) {
+      analyzerElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
+
+  const goToDocumentation = () => {
+    window.location.href = '/documentation'
+  }
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -94,12 +105,18 @@ export function HeroSection() {
         <motion.div variants={itemVariants} className="flex gap-4 justify-center flex-wrap mb-20">
           <motion.button
             className="btn-glow"
+            onClick={scrollToAnalyzer}
             whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(0, 217, 255, 0.8)" }}
             whileTap={{ scale: 0.95 }}
           >
             Comenzar Análisis
           </motion.button>
-          <motion.button className="btn-ghost" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <motion.button 
+            className="btn-ghost" 
+            onClick={goToDocumentation}
+            whileHover={{ scale: 1.05 }} 
+            whileTap={{ scale: 0.95 }}
+          >
             Más Información
           </motion.button>
         </motion.div>
